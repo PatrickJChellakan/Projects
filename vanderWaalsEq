@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+   float p;
+   float v;
+   float numMoles;
+   
+   cin >> p;
+   cin >> v;
+   cin >> numMoles;
+   
+   float firstTerm = (numMoles * numMoles) / (v * v);
+   float secondTerm = p + 3.59 * (firstTerm);
+   float thirdTerm = (v - 0.0427 * numMoles);
+   float fourthTerm = (secondTerm * thirdTerm) / (8.314 * numMoles);
+   
+   cout << fourthTerm;
+   cout << endl;
+   
+
+   return 0;
+}
